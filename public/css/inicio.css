@@ -1,0 +1,21 @@
+body {
+    background-image: linear-gradient(to left top, #bb31b4, #9233a9, #6a329b, #422e89, #152775);
+    
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+.c-datos {
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    backdrop-filter: blur(10px); /* Desenfoque del fondo */
+    -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}

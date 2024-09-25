@@ -1,0 +1,59 @@
+//URL: dirreccion externa
+//URI: direccion interna
+const enviar_datos = () => {
+    let email = document.getElementById('email-id').value;
+    let pass = document.getElementById('pass-id').value;
+    let data = new FormData();
+    data.append("email",email); //añade datos al formulario
+    data.append("pass",pass); //añade datos al formulario
+    fetch("app/controller/login.php",{
+        method:"POST",
+        body: data
+    }).then(respuesta => respuesta.json())
+    .then(respuesta => {
+        if (respuesta[0] == 1) {
+            alert(respuesta[1]);
+            window.location="index.php"
+        }else {
+            alert(respuesta[1]);
+        }
+    });
+}
+
+const validar_datos = () => {
+    let nombre = document.getElementById('nombre').value;
+    let apellido = document.getElementById('apellido').value;
+    let email = document.getElementById('email').value;
+    let pass = document.getElementById('pass').value;
+    let data = new FormData();
+    data.append("nombre",nombre); //añade datos al formulario
+    data.append("apellido",apellido); //añade datos al formulario
+    data.append("email",email); //añade datos al formulario
+    data.append("pass",pass); //añade datos al formulario
+    fetch("app/controller/registro.php",{
+        method:"POST",
+        body: data
+    }).then(respuesta => respuesta.json())
+    .then(respuesta => {
+        if (respuesta[0] == 1) {
+            alert(respuesta[1]);
+            window.location="login.php";
+        }else {
+            alert(respuesta[1]);
+        }
+    });
+}
+
+window.addEventListener('DOMContentLoaded',() => {
+    if (document.getElementById('btn-saludar')) {
+        document.getElementById('btn-saludar').addEventListener('click',() => {
+            enviar_datos();
+        });                
+    }
+    if (document.getElementById('btn-registrar')) {
+        document.getElementById('btn-registrar').addEventListener('click',() => {
+            validar_datos();
+        });        
+    }
+});
+
