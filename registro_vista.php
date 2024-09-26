@@ -39,6 +39,7 @@ require_once("./app/controller/registro.php");
         </div>
     </form>
 
+    <script src="./public/js/alerts.js"></script>
     <script src="./public/js/main.js"></script>
 </body>
 </html>

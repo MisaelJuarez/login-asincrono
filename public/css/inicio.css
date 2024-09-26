@@ -1,6 +1,6 @@
 body {
     background-image: linear-gradient(to left top, #bb31b4, #9233a9, #6a329b, #422e89, #152775);
-    
+    background-attachment: fixed;    
 }
 
 h1 {

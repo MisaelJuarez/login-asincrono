@@ -1,5 +1,6 @@
 body {
    background-image: linear-gradient(to bottom, #2b0444, #370652, #430860, #500a6e, #5d0c7c, #691189, #761797, #831ca5, #9226b5, #a12fc6, #b039d7, #bf42e8);
+   background-attachment: fixed;
 }
 
 button {

@@ -42,8 +42,9 @@ if (isset($_SESSION['usuario'])) {
             <p class="">¿No tienes una cuenta?</p> 
             <a href="./registro_vista.php" class="text-white mx-3">Crear ahora</a>
         </div>
-        
     </form>
+
+    <script src="./public/js/alerts.js"></script>
     <script src="./public/js/main.js"></script>
 </body>
 </html>

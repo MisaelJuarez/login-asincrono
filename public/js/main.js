@@ -10,12 +10,12 @@ const enviar_datos = () => {
         method:"POST",
         body: data
     }).then(respuesta => respuesta.json())
-    .then(respuesta => {
+    .then(async respuesta => {
         if (respuesta[0] == 1) {
-            alert(respuesta[1]);
-            window.location="index.php"
+            await Swal.fire({icon: "success",title:`${respuesta[1]}`});
+            window.location="index.php";
         }else {
-            alert(respuesta[1]);
+            Swal.fire({icon: "error",title:`${respuesta[1]}`});
         }
     });
 }
@@ -34,12 +34,12 @@ const validar_datos = () => {
         method:"POST",
         body: data
     }).then(respuesta => respuesta.json())
-    .then(respuesta => {
+    .then(async respuesta => {
         if (respuesta[0] == 1) {
-            alert(respuesta[1]);
+            await Swal.fire({icon: "success",title:`${respuesta[1]}`});
             window.location="login.php";
         }else {
-            alert(respuesta[1]);
+            Swal.fire({icon: "error",title:`${respuesta[1]}`});
         }
     });
 }
