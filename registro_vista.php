@@ -13,7 +13,7 @@ require_once("./app/controller/registro.php");
     <link rel="stylesheet" href="<?=CSS."registro_vista.css";?>">
     <title>Formulario de datos</title>
 </head>
-<body class="vh-100 d-flex justify-content-center align-items-center">
+<body class="d-flex justify-content-center align-items-center mt-5 p-3">
     <form action="./registro_vista.php" method="post" class="w-25 p-4">
         <div class="text-center mb-4 c-user">
             <i class="bi bi-person-fill-add text-white"></i>
